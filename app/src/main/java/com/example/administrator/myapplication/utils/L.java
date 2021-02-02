@@ -1,10 +1,10 @@
 package com.example.administrator.myapplication.utils;
 
 /*
- *  项目名：  SmartButler 
- *  包名：    com.imooc.smartbutler.utils
+ *  项目名：  MyApplication
+ *  包名：    com.example.administrator.myapplication.utils
  *  文件名:   L
- *  创建者:   LGL
+ *  创建者:   xjl
  *  创建时间:  2016/10/26 23:10
  *  描述：    Log封装类
  */
@@ -16,7 +16,7 @@ public class L {
     //开关
     public static final  boolean DEBUG = true;
     //TAG
-    public static final String TAG = "Smartbutler";
+    public static final String TAG = "MyApplication";
 
     //五个等级  DIWE
 

@@ -1,11 +1,11 @@
 package com.example.administrator.myapplication.utils;
 
 /*
- *  项目名：  SmartButler 
- *  包名：    com.imooc.smartbutler.utils
- *  文件名:   ShareUtils
- *  创建者:   LGL
- *  创建时间:  2016/10/26 23:24
+ *  项目名：  MyApplication
+ *  包名：    com.example.administrator.myapplication.utils
+ *  文件名:   utils
+ *  创建者:   xjl
+ *  创建时间:
  *  描述：    SharedPreferences封装
  */
 

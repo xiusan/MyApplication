@@ -1,11 +1,11 @@
 package com.example.administrator.myapplication.utils;
 
 /*
- *  项目名：  SmartButler 
- *  包名：    com.imooc.smartbutler.utils
+ *  项目名：  MyApplication
+ *  包名：    com.example.administrator.myapplication.utils
  *  文件名:   StaticClass
- *  创建者:   LGL
- *  创建时间:  2016/10/21 23:25
+ *  创建者:   xjl
+ *  创建时间:
  *  描述：    数据/常量
  */
 
