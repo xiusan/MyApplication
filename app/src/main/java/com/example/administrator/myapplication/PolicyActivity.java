@@ -24,7 +24,7 @@ public class PolicyActivity extends AppCompatActivity  {
         webView = (WebView) findViewById(R.id.web_view);
         webView = new WebView(this);
         try {
-            webView.loadData(URLEncoder.encode("<h2>我是WebView</h2>", "utf-8"), "text/html",  "utf-8");
+            webView.loadData(URLEncoder.encode("<h2>注册成功，您的第一个急速应用</h2>", "utf-8"), "text/html",  "utf-8");
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
