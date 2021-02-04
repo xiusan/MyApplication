@@ -1,2 +1,2 @@
 # MyApplication
-Activity调用
+android各种ui实例
