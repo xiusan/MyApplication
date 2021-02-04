@@ -19,6 +19,10 @@
         <activity
             android:name=".PolicyActivity"
             android:label="@string/html_test" />
+        <!-- LinearLayout(线性布局) -->
+        <activity
+            android:name=".ui.UiLinearLayout"
+            android:label="线性布局" />
     </application>
 
 </manifest>
