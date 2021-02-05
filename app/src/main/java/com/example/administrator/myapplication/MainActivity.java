@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.administrator.myapplication.ui.UiLinearLayout;
+import com.example.administrator.myapplication.ui.UiRelativeLayoutActivity;
 
 /**
  * 布局总控代码
@@ -16,6 +17,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //定义xml属性
     //UiLinearLayout(线性布局)
     private Button activityLinearLayou;
+    //RelativeLayout(相对布局)
+    private Button activityLlinearLayou;
 
 
     @Override
@@ -28,6 +31,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initView() {
         activityLinearLayou = (Button) findViewById(R.id.btn_linear_layout);
         activityLinearLayou.setOnClickListener(this);
+        activityLlinearLayou = (Button) findViewById(R.id.btn_relative_layout);
+        activityLlinearLayou.setOnClickListener(this);
     }
     @Override
     public void onClick(View v) {
@@ -37,6 +42,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 System.out.println("btn_linear_layout");
                 startActivity(new Intent(this, UiLinearLayout.class));
+                break;
+                case R.id.btn_relative_layout:
+
+                System.out.println("UiRelativeLayoutActivity");
+                startActivity(new Intent(this, UiRelativeLayoutActivity.class));
                 break;
         }
     }

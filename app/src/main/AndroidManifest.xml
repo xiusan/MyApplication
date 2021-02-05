@@ -23,6 +23,10 @@
         <activity
             android:name=".ui.UiLinearLayout"
             android:label="线性布局" />
+        <!-- RelativeLayout(相对布局) -->
+        <activity
+            android:name=".ui.UiRelativeLayoutActivity"
+            android:label="相对布局" />
     </application>
 
 </manifest>
