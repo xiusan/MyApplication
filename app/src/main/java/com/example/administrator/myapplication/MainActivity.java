@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.example.administrator.myapplication.ui.UiLinearLayout;
 import com.example.administrator.myapplication.ui.UiRelativeLayoutActivity;
+import com.example.administrator.myapplication.ui.UiTableLayoutActivity;
 
 /**
  * 布局总控代码
@@ -20,6 +21,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //RelativeLayout(相对布局)
     private Button activityLlinearLayou;
 
+    //RelativeLayout(相对布局)
+    private Button activityTableTayout;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +34,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void initView() {
         activityLinearLayou = (Button) findViewById(R.id.btn_linear_layout);
+        //这里必须添加应用事件
         activityLinearLayou.setOnClickListener(this);
+
         activityLlinearLayou = (Button) findViewById(R.id.btn_relative_layout);
         activityLlinearLayou.setOnClickListener(this);
+
+        activityTableTayout = (Button) findViewById(R.id.btn_table_layout);
+        activityTableTayout.setOnClickListener(this);
     }
     @Override
     public void onClick(View v) {
@@ -47,6 +56,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 System.out.println("UiRelativeLayoutActivity");
                 startActivity(new Intent(this, UiRelativeLayoutActivity.class));
+                break;
+                case R.id.btn_table_layout:
+
+                System.out.println("UiTableLayoutActivity");
+                startActivity(new Intent(this, UiTableLayoutActivity.class));
                 break;
         }
     }

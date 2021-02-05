@@ -27,6 +27,11 @@
         <activity
             android:name=".ui.UiRelativeLayoutActivity"
             android:label="相对布局" />
+
+        <!-- RelativeLayout(相对布局) -->
+        <activity
+            android:name=".ui.UiTableLayoutActivity"
+            android:label="表格布局" />
     </application>
 
 </manifest>
