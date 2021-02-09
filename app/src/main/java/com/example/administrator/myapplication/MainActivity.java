@@ -6,9 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.administrator.myapplication.ui.UiLinearLayout;
-import com.example.administrator.myapplication.ui.UiRelativeLayoutActivity;
-import com.example.administrator.myapplication.ui.UiTableLayoutActivity;
+import com.example.administrator.myapplication.handler.HanderOneActivity;
+import com.example.administrator.myapplication.handler.HanderTwoActivity;
 
 /**
  * 布局总控代码
@@ -16,13 +15,10 @@ import com.example.administrator.myapplication.ui.UiTableLayoutActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     //定义xml属性
-    //UiLinearLayout(线性布局)
-    private Button activityLinearLayou;
-    //RelativeLayout(相对布局)
-    private Button activityLlinearLayou;
+    //activityHandlerOne(handler的基本处理)
+    private Button activityHandlerOne;
 
-    //RelativeLayout(相对布局)
-    private Button activityTableTayout;
+    private Button activityHandlerTwo;
 
 
     @Override
@@ -33,35 +29,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initView() {
-        activityLinearLayou = (Button) findViewById(R.id.btn_linear_layout);
+        activityHandlerOne = (Button) findViewById(R.id.btn_handler_one);
         //这里必须添加应用事件
-        activityLinearLayou.setOnClickListener(this);
+        activityHandlerOne.setOnClickListener(this);
 
-        activityLlinearLayou = (Button) findViewById(R.id.btn_relative_layout);
-        activityLlinearLayou.setOnClickListener(this);
-
-        activityTableTayout = (Button) findViewById(R.id.btn_table_layout);
-        activityTableTayout.setOnClickListener(this);
+        activityHandlerTwo = (Button) findViewById(R.id.btn_handler_two);
+        //这里必须添加应用事件
+        activityHandlerTwo.setOnClickListener(this);
     }
     @Override
     public void onClick(View v) {
-        System.out.println("btn_linear_layout");
+        System.out.println("btn_handler_one");
         switch (v.getId()) {
-            case R.id.btn_linear_layout:
+            case R.id.btn_handler_one:
+            System.out.println("btn_handler_one");
+            startActivity(new Intent(this, HanderOneActivity.class));
+            break;
+            case R.id.btn_handler_two:
+            System.out.println("btn_handler_two");
+            startActivity(new Intent(this, HanderTwoActivity.class));
+            break;
 
-                System.out.println("btn_linear_layout");
-                startActivity(new Intent(this, UiLinearLayout.class));
-                break;
-                case R.id.btn_relative_layout:
-
-                System.out.println("UiRelativeLayoutActivity");
-                startActivity(new Intent(this, UiRelativeLayoutActivity.class));
-                break;
-                case R.id.btn_table_layout:
-
-                System.out.println("UiTableLayoutActivity");
-                startActivity(new Intent(this, UiTableLayoutActivity.class));
-                break;
         }
     }
 

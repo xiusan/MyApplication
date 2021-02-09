@@ -21,5 +21,7 @@
     <string name="text_password">密码</string>
 
     <string name="html_test">html_test</string>
+    <string name="handler_one">处理1</string>
+    <string name="handler_twe">处理2带参</string>
 
 </resources>

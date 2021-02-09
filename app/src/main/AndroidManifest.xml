@@ -19,19 +19,14 @@
         <activity
             android:name=".PolicyActivity"
             android:label="@string/html_test" />
-        <!-- LinearLayout(线性布局) -->
+        <!-- handler 处理 -->
         <activity
-            android:name=".ui.UiLinearLayout"
-            android:label="线性布局" />
-        <!-- RelativeLayout(相对布局) -->
+            android:name=".handler.HanderOneActivity"
+            android:label="@string/handler_one" />
+        <!-- handler 处理带参 -->
         <activity
-            android:name=".ui.UiRelativeLayoutActivity"
-            android:label="相对布局" />
-
-        <!-- RelativeLayout(相对布局) -->
-        <activity
-            android:name=".ui.UiTableLayoutActivity"
-            android:label="表格布局" />
+            android:name=".handler.HanderTwoActivity"
+            android:label="@string/handler_twe" />
     </application>
 
 </manifest>
