@@ -27,6 +27,10 @@
         <activity
             android:name=".handler.HanderTwoActivity"
             android:label="@string/handler_twe" />
+        <!-- listview 列表展示 -->
+        <activity
+            android:name=".handler.ListViewActivity"
+            android:label="@string/list_view" />
     </application>
 
 </manifest>

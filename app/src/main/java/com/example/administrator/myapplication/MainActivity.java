@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.example.administrator.myapplication.handler.HanderOneActivity;
 import com.example.administrator.myapplication.handler.HanderTwoActivity;
+import com.example.administrator.myapplication.handler.ListViewActivity;
 
 /**
  * 布局总控代码
@@ -19,6 +20,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button activityHandlerOne;
 
     private Button activityHandlerTwo;
+
+    //进入列表button
+    private Button activityListView;
 
 
     @Override
@@ -36,6 +40,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         activityHandlerTwo = (Button) findViewById(R.id.btn_handler_two);
         //这里必须添加应用事件
         activityHandlerTwo.setOnClickListener(this);
+        //列表
+        activityListView = (Button) findViewById(R.id.btn_list_view);
+        //这里必须添加应用事件
+        activityListView.setOnClickListener(this);
     }
     @Override
     public void onClick(View v) {
@@ -48,6 +56,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_handler_two:
             System.out.println("btn_handler_two");
             startActivity(new Intent(this, HanderTwoActivity.class));
+            break;
+            case R.id.btn_list_view:
+            System.out.println("btn_handler_two");
+            startActivity(new Intent(this, ListViewActivity.class));
             break;
 
         }
