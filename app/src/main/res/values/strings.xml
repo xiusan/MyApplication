@@ -24,5 +24,6 @@
     <string name="handler_one">处理1</string>
     <string name="handler_twe">处理2带参</string>
     <string name="list_view">列表</string>
+    <string name="ok_http">网络Okhttp</string>
 
 </resources>

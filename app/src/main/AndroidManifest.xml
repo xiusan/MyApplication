@@ -33,6 +33,10 @@
         <activity
             android:name=".handler.ListViewActivity"
             android:label="@string/list_view" />
+        <!-- http Example 一定要注册 -->
+        <activity
+            android:name=".http.OkhttpActivity"
+            android:label="@string/ok_http" />
     </application>
 
 </manifest>

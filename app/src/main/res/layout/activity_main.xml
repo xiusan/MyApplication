@@ -33,4 +33,12 @@
         android:text="@string/list_view"
         android:textColor="@android:color/white" />
 
+    <Button
+        android:id="@+id/btn_http_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_bg"
+        android:text="@string/ok_http"
+        android:textColor="@android:color/white" />
 </LinearLayout>

@@ -9,6 +9,7 @@ import android.widget.Button;
 import com.example.administrator.myapplication.handler.HanderOneActivity;
 import com.example.administrator.myapplication.handler.HanderTwoActivity;
 import com.example.administrator.myapplication.handler.ListViewActivity;
+import com.example.administrator.myapplication.http.OkhttpActivity;
 
 /**
  * 布局总控代码
@@ -23,6 +24,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     //进入列表button
     private Button activityListView;
+
+    //进入列表okhttp
+    private Button activityOkhttp;
 
 
     @Override
@@ -44,6 +48,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         activityListView = (Button) findViewById(R.id.btn_list_view);
         //这里必须添加应用事件
         activityListView.setOnClickListener(this);
+
+        //okhttp
+        activityOkhttp = (Button) findViewById(R.id.btn_http_view);
+        //这里必须添加应用事件
+        activityOkhttp.setOnClickListener(this);
     }
     @Override
     public void onClick(View v) {
@@ -60,6 +69,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_list_view:
             System.out.println("btn_handler_two");
             startActivity(new Intent(this, ListViewActivity.class));
+            break;
+            case R.id.btn_http_view:
+            System.out.println("btn_http_view");
+            startActivity(new Intent(this, OkhttpActivity.class));
             break;
 
         }
