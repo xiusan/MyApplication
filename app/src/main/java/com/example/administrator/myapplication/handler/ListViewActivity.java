@@ -1,25 +1,21 @@
 package com.example.administrator.myapplication.handler;
 
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
-import android.transition.Scene;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.administrator.myapplication.R;
-import com.example.administrator.myapplication.utils.L;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,6 +48,15 @@ public class ListViewActivity extends AppCompatActivity {
         //创建数据
         List<String> infos = getAppListString();
         mListView.setAdapter(new AppListAdapter(infos));
+        //定义事假
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                System.out.println("000000000000000000000000000");
+                Toast.makeText(getApplicationContext(), "id="+id,
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private List<String> getAppListString() {

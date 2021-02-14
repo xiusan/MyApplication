@@ -10,3 +10,9 @@
     1
 
 ## AsyncTask异步任务各种实例
+
+
+
+# io http
+##  okio 实例  （ [ExampleUnitTest.java](app/src/test/java/com/example/administrator/myapplication/ExampleUnitTest.java)）
+## okhttp 实例
