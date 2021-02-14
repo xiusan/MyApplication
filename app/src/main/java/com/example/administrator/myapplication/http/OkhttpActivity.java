@@ -67,7 +67,7 @@ public class OkhttpActivity  extends AppCompatActivity {
     private void post() {
         Request.Builder builder = new Request.Builder();
         builder.url(POST_URL);
-        builder.post(RequestBody.create(MEDIA_TYPE_MARKDOWN, "Hello world github/linguist#1 **cool**, and #1!"));
+        builder.post(RequestBody.create(MEDIA_TYPE_MARKDOWN, "Hello world git #1 **ma**, and ### 1"));
         Request request = builder.build();
         Call call = mClient.newCall(request);
         call.enqueue(new Callback() {
