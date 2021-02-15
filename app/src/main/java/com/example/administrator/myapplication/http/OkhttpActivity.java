@@ -11,8 +11,11 @@ import android.widget.TextView;
 import com.example.administrator.myapplication.R;
 
 import java.io.IOException;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -25,7 +28,7 @@ import okhttp3.Response;
 
 
 public class OkhttpActivity  extends AppCompatActivity {
-    private static final String TAG = "MainActivity-xx";
+    private static final String TAG = "OkhttpActivity";
 
     private static final MediaType MEDIA_TYPE_MARKDOWN
             = MediaType.parse("text/x-markdown; charset=utf-8");
@@ -52,7 +55,13 @@ public class OkhttpActivity  extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menuGet:
-                get();
+                try {
+                    get();
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 break;
             case R.id.menuResponse:
                 response();
@@ -122,12 +131,14 @@ public class OkhttpActivity  extends AppCompatActivity {
         });
     }
 
-    private void get() {
+    private void get() throws ExecutionException, InterruptedException {
+        String urlStr = null;
         ExecutorService executor = Executors.newSingleThreadExecutor();
-        executor.submit(new Runnable() {
+        Future<Object> submit = executor.submit(new Callable<Object>() {
             @Override
-            public void run() {
-                Request.Builder builder = new Request.Builder();
+            public Object call() {
+                  String string = null;
+                        Request.Builder builder = new Request.Builder();
                 builder.url("https://github.com/xiusan/MyApplication/blob/master/README.md");
                 Request request = builder.build();
                 Log.d(TAG, "run: " + request);
@@ -135,19 +146,24 @@ public class OkhttpActivity  extends AppCompatActivity {
                 try {
                     Response response = call.execute();
                     if (response.isSuccessful()) {
-                        final String string = response.body().string();
+                        string = response.body().string();
+                        final String finalString = string;
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                mContentTextView.setText(string);
+                                mContentTextView.setText(finalString);
                             }
                         });
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+                return string;
             }
         });
+        urlStr = (String) submit.get();
+
         executor.shutdown();
+
     }
 }
