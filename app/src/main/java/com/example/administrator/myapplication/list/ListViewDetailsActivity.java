@@ -1,4 +1,4 @@
-package com.example.administrator.myapplication.handler;
+package com.example.administrator.myapplication.list;
 
 import android.content.Intent;
 import android.os.Bundle;
