@@ -86,6 +86,10 @@ public class ListViewActivity extends AppCompatActivity {
                 {
                     L.i("传值位置="+position);
                     Intent intent = new Intent(getApplicationContext(), ListViewDetailsActivity.class);
+//                    Bundle bundle = new Bundle();
+//                    bundle.putString("key","values");
+//                    intent.putExtras(bundle);
+
                     intent.putExtra("title",mListTitle.get(position));
                     intent.putExtra("url",mlistUrl.get(position));
                     startActivity(intent);
