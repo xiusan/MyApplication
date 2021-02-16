@@ -13,6 +13,7 @@
 
 ## 列表  listview  [ListViewActivity.java](app/src/main/java/com/example/administrator/myapplication/handler/ListViewActivity.java)
  1 添加图片展示
+ 2 点击加载详情
 
 # io http
 ##  okio 实例  （ [ExampleUnitTest.java](app/src/test/java/com/example/administrator/myapplication/ExampleUnitTest.java)）

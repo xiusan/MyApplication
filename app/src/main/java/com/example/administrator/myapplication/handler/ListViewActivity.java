@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.content.pm.ResolveInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.media.Image;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -17,7 +16,6 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.administrator.myapplication.R;
 import com.example.administrator.myapplication.entity.FirstData;
@@ -64,6 +62,10 @@ public class ListViewActivity extends AppCompatActivity {
      * 4 adapter数据填充到每一行
      *  */
     private ListView mListView;
+    List<FirstData> list = new ArrayList<>();
+
+    List<String> mListTitle = new ArrayList<>();
+    List<String> mlistUrl = new ArrayList<>();
 
     private final OkHttpClient mClient = new OkHttpClient();
 
@@ -82,16 +84,11 @@ public class ListViewActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 {
-                    final String url = "http://v.juhe.cn/toutiao/index?type=shishang&key="+"5c1df2ef1f0dda4edeb0c23b33621bc6";
-                     
-                       // String json = get(url);
-                        //解析json
-                        
-                        //System.out.println(s);
-
-                    
-
-
+                    L.i("传值位置="+position);
+                    Intent intent = new Intent(getApplicationContext(), ListViewDetailsActivity.class);
+                    intent.putExtra("title",mListTitle.get(position));
+                    intent.putExtra("url",mlistUrl.get(position));
+                    startActivity(intent);
                 }
 
             }
@@ -101,7 +98,6 @@ public class ListViewActivity extends AppCompatActivity {
     private List<FirstData> getAppListString() {
         final String url = "http://v.juhe.cn/toutiao/index?type=shishang&key="+"5c1df2ef1f0dda4edeb0c23b33621bc6";
 
-        List<FirstData> list = null;
         try {
             String json = get(url);
             //解析json
@@ -129,12 +125,16 @@ public class ListViewActivity extends AppCompatActivity {
             for (int i=0; i<data.length();i++){
                 FirstData firstData = new FirstData();
                 JSONObject jsonSon = (JSONObject)data.get(i);
-                firstData.setTitle(jsonSon.getString("title"));
-                firstData.setUrl(jsonSon.getString("url"));
+                String url = jsonSon.getString("url");
+                String title = jsonSon.getString("title");
+                firstData.setTitle(title);
+                firstData.setUrl(url);
                 firstData.setAuthorName(jsonSon.getString("author_name"));
                 firstData.setThumbnailPicS(jsonSon.getString("thumbnail_pic_s"));
                 firstData.setUniquekey(jsonSon.getString("uniquekey"));
                 list.add(firstData);
+                mListTitle.add(title);
+                mlistUrl.add(url);
             }
 
         } catch (JSONException e) {

@@ -64,6 +64,9 @@
         <activity
             android:name=".handler.ListViewActivity"
             android:label="@string/list_view" />
+        <!-- listview 列表展示详情 ，动态设置 label-->
+        <activity
+            android:name=".handler.ListViewDetailsActivity" />
         <!-- http Example 一定要注册 -->
         <activity
             android:name=".http.OkhttpActivity"
