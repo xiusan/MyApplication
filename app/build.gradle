@@ -36,5 +36,8 @@ dependencies {
 //    io操作https://mvnrepository.com/artifact/com.squareup.okio/okio
     implementation 'com.squareup.okio:okio:2.7.0'
 // https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp 操作网络请求
-    compile 'com.squareup.okhttp3:okhttp:3.7.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.7.0'
+    //Picasso
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
 }
