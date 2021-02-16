@@ -1,12 +1,12 @@
 package com.example.administrator.myapplication.utils;
 
 /*
- *  项目名：  SmartButler 
- *  包名：    com.imooc.smartbutler.utils
+ *  项目名：
+ *  包名：
  *  文件名:   PicassoUtils
- *  创建者:   LGL
- *  创建时间:  2016/11/18 23:05
- *  描述：    Picasso封装
+ *  创建者:
+ *  创建时间:
+ *  描述：
  */
 
 import android.content.Context;
