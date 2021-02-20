@@ -7,7 +7,7 @@
     android:padding="10dp">
 
     <Button
-        android:id="@+id/btn_handler_one"
+        android:id="@+id/btn_io_one"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -15,30 +15,4 @@
         android:text="@string/handler_one"
         android:textColor="@android:color/white" />
 
-    <Button
-        android:id="@+id/btn_handler_two"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/button_bg"
-        android:text="@string/handler_twe"
-        android:textColor="@android:color/white" />
-
-    <Button
-        android:id="@+id/btn_list_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/button_bg"
-        android:text="@string/list_view"
-        android:textColor="@android:color/white" />
-
-    <Button
-        android:id="@+id/btn_http_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/button_bg"
-        android:text="@string/ok_http"
-        android:textColor="@android:color/white" />
 </LinearLayout>

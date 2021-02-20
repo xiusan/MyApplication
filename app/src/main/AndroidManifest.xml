@@ -49,28 +49,10 @@
             </intent-filter>
         </activity>
         <!-- html_test -->
-        <activity
-            android:name=".PolicyActivity"
-            android:label="@string/html_test" />
         <!-- handler 处理 -->
         <activity
-            android:name=".handler.HanderOneActivity"
-            android:label="@string/handler_one" />
-        <!-- handler 处理带参 -->
-        <activity
-            android:name=".handler.HanderTwoActivity"
-            android:label="@string/handler_twe" />
-        <!-- listview 列表展示 -->
-        <activity
-            android:name=".list.ListViewActivity"
-            android:label="@string/list_view" />
-        <!-- listview 列表展示详情 ，动态设置 label-->
-        <activity
-            android:name=".list.ListViewDetailsActivity" />
-        <!-- http Example 一定要注册 -->
-        <activity
-            android:name=".http.OkhttpActivity"
-            android:label="@string/ok_http" />
+            android:name=".io.TestIo"
+            android:label="@string/io_one" />
     </application>
 
 </manifest>
