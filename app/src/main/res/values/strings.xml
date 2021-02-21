@@ -21,10 +21,11 @@
     <string name="text_password">密码</string>
 
     <string name="html_test">html_test</string>
-    <string name="handler_one">处理1</string>
+    <string name="handler_one">SharedPreference使用</string>
     <string name="handler_twe">处理2带参</string>
     <string name="list_view">列表</string>
     <string name="ok_http">网络Okhttp</string>
     <string name="io_one">Io实例</string>
+    <string name="sharedpre_ference">SharedPreference使用</string>
 
 </resources>

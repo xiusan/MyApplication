@@ -51,8 +51,8 @@
         <!-- html_test -->
         <!-- handler 处理 -->
         <activity
-            android:name=".io.TestIo"
-            android:label="@string/io_one" />
+            android:name=".io.SharedpreFerenceActivity"
+            android:label="@string/sharedpre_ference" />
     </application>
 
 </manifest>

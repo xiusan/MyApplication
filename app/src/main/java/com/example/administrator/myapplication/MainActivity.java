@@ -6,7 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.administrator.myapplication.io.TestIo;
+import com.example.administrator.myapplication.io.SharedpreFerenceActivity;
+import com.example.administrator.myapplication.utils.L;
 
 /**
  * 布局总控代码
@@ -33,11 +34,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
     @Override
     public void onClick(View v) {
-        System.out.println("btn_handler_one");
+        L.i("btn_handler_one");
         switch (v.getId()) {
             case R.id.btn_io_one:
-            System.out.println("btn_handler_one");
-            startActivity(new Intent(this, TestIo.class));
+            L.i("btn_handler_one");
+            startActivity(new Intent(this, SharedpreFerenceActivity.class));
             break;
 
         }
