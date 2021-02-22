@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">我是第一个应用</string>
+    <string name="app_name">ioDemo</string>
     <string name="text_setting">设置</string>
     <string name="text_login">登录</string>
     <string name="text_registered">注册</string>
@@ -27,5 +27,6 @@
     <string name="ok_http">网络Okhttp</string>
     <string name="io_one">Io实例</string>
     <string name="sharedpre_ference">SharedPreference使用</string>
+    <string name="name_external_storage">ExternalStorage外部存储</string>
 
 </resources>

@@ -15,4 +15,13 @@
         android:text="@string/sharedpre_ference"
         android:textColor="@android:color/white" />
 
+    <Button
+        android:id="@+id/external_storage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_bg"
+        android:text="@string/name_external_storage"
+        android:textColor="@android:color/white" />
+
 </LinearLayout>
