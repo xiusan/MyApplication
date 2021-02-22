@@ -61,6 +61,10 @@
         <activity
             android:name=".io.ExternalStorageActivity"
             android:label="@string/name_external_storage" />
+        <!--内部存储-->
+        <activity
+            android:name=".io.InternalStorageActivity"
+            android:label="@string/name_internal_storage" />
     </application>
 
 </manifest>

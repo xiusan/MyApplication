@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.administrator.myapplication.io.ExternalStorageActivity;
+import com.example.administrator.myapplication.io.InternalStorageActivity;
 import com.example.administrator.myapplication.io.SharedpreFerenceActivity;
 import com.example.administrator.myapplication.utils.L;
 
@@ -17,7 +18,7 @@ import com.example.administrator.myapplication.utils.L;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     //定义xml属性
     //activityHandlerOne(handler的基本处理)
-    private Button activityHandlerOne,activityExternalStorage;
+    private Button activityHandlerOne,activityExternalStorage,activityInternalStorage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +37,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //这里必须添加应用事件
         activityExternalStorage.setOnClickListener(this);
 
+        //内部存储
+        activityInternalStorage = (Button) findViewById(R.id.internal_storage);
+        //这里必须添加应用事件
+        activityInternalStorage .setOnClickListener(this);
+
 
     }
     @Override
@@ -49,6 +55,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.external_storage:
             L.i("btn_handler_one");
             startActivity(new Intent(this, ExternalStorageActivity.class));
+            break;
+            case R.id.internal_storage:
+            L.i("internal_storage");
+            startActivity(new Intent(this, InternalStorageActivity.class));
             break;
 
         }
