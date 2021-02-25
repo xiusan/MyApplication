@@ -60,9 +60,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_io_one:
             L.i("btn_handler_one");
             startActivity(new Intent(this, SharedpreFerenceActivity.class));
-            case R.id.btn_sqllite:
-            L.i("btn_sqllite");
-            startActivity(new Intent(this, SqlliteActivity.class));
             break;
             case R.id.external_storage:
             L.i("btn_handler_one");
@@ -72,7 +69,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             L.i("internal_storage");
             startActivity(new Intent(this, InternalStorageActivity.class));
             break;
-
+            case R.id.btn_sqllite:
+                L.i("btn_sqllite");
+                startActivity(new Intent(this, SqlliteActivity.class));
         }
     }
 

@@ -57,7 +57,19 @@
         <!-- sqllite example -->
         <activity
             android:name=".io.SqlliteActivity"
-            android:label="@string/sharedpre_ference" />
+            android:label="@string/text_sql_lite" />
+
+
+        <!-- sqllite example -->
+        <activity
+            android:name=".io.InternalStorageActivity"
+            android:label="@string/name_internal_storage" />
+
+
+        <!-- sqllite example -->
+        <activity
+            android:name=".io.ExternalStorageActivity"
+            android:label="@string/name_external_storage" />
     </application>
 
 </manifest>
