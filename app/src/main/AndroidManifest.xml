@@ -53,6 +53,11 @@
         <activity
             android:name=".io.SharedpreFerenceActivity"
             android:label="@string/sharedpre_ference" />
+
+        <!-- sqllite example -->
+        <activity
+            android:name=".io.SqlliteActivity"
+            android:label="@string/sharedpre_ference" />
     </application>
 
 </manifest>
