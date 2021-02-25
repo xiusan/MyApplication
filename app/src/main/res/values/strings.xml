@@ -27,6 +27,7 @@
     <string name="ok_http">网络Okhttp</string>
     <string name="io_one">Io实例</string>
     <string name="sharedpre_ference">SharedPreference使用</string>
+    <string name="text_sql_lite">sqllite</string>
     <string name="name_external_storage">ExternalStorage外部存储</string>
     <string name="name_internal_storage">内部存储</string>
 

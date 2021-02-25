@@ -16,21 +16,12 @@
         android:textColor="@android:color/white" />
 
     <Button
-        android:id="@+id/external_storage"
+        android:id="@+id/btn_sqllite"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_bg"
-        android:text="@string/name_external_storage"
-        android:textColor="@android:color/white" />
-
-    <Button
-        android:id="@+id/internal_storage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/button_bg"
-        android:text="@string/name_internal_storage"
+        android:text="@string/text_sql_lite"
         android:textColor="@android:color/white" />
 
 </LinearLayout>
