@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.administrator.myapplication.event.EventSimpleActivity;
 import com.example.administrator.myapplication.handler.HanderOneActivity;
 import com.example.administrator.myapplication.handler.HanderTwoActivity;
 import com.example.administrator.myapplication.list.ListViewActivity;
@@ -18,15 +19,10 @@ import com.example.administrator.myapplication.http.OkhttpActivity;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     //定义xml属性
     //activityHandlerOne(handler的基本处理)
-    private Button activityHandlerOne;
+    private Button activityHandlerOne,activityHandlerTwo,activityListView,activityOkhttp
+    ,activityEventSimple;
 
-    private Button activityHandlerTwo;
 
-    //进入列表button
-    private Button activityListView;
-
-    //进入列表okhttp
-    private Button activityOkhttp;
 
 
     @Override
@@ -53,6 +49,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         activityOkhttp = (Button) findViewById(R.id.btn_http_view);
         //这里必须添加应用事件
         activityOkhttp.setOnClickListener(this);
+
+        //简单事件
+        activityEventSimple = (Button) findViewById(R.id.btn_event_simple);
+        //这里必须添加应用事件
+        activityEventSimple.setOnClickListener(this);
     }
     @Override
     public void onClick(View v) {
@@ -73,6 +74,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_http_view:
             System.out.println("btn_http_view");
             startActivity(new Intent(this, OkhttpActivity.class));
+
+            case R.id.btn_event_simple:
+            System.out.println("btn_event_simple");
+            startActivity(new Intent(this, EventSimpleActivity.class));
             break;
 
         }

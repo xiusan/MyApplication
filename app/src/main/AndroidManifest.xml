@@ -71,6 +71,11 @@
         <activity
             android:name=".http.OkhttpActivity"
             android:label="@string/ok_http" />
+
+        <!-- 简单事件  -->
+        <activity
+            android:name=".event.EventSimpleActivity"
+            android:label="@string/event_simple" />
     </application>
 
 </manifest>

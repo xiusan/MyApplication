@@ -18,3 +18,10 @@
 # io http
 ##  okio 实例  （ [ExampleUnitTest.java](app/src/test/java/com/example/administrator/myapplication/ExampleUnitTest.java)）
 ## okhttp 实例  [OkhttpActivity.java](app/src/main/java/com/example/administrator/myapplication/http/OkhttpActivity.java)
+
+# eventbus  通信   事件总线  订阅发送
+## 常规通信方法
+[EventSimpleActivity.java](app/src/main/java/com/example/administrator/myapplication/event/EventSimpleActivity.java)
+## evenbus 通信方法
+
+
