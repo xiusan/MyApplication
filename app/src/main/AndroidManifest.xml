@@ -76,6 +76,10 @@
         <activity
             android:name=".event.EventSimpleActivity"
             android:label="@string/event_simple" />
+        <!-- 广播事件监听  -->
+        <activity
+            android:name=".event.EventLocalListenerActivity"
+            android:label="@string/local_listener" />
     </application>
 
 </manifest>

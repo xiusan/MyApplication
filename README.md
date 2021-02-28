@@ -20,8 +20,15 @@
 ## okhttp 实例  [OkhttpActivity.java](app/src/main/java/com/example/administrator/myapplication/http/OkhttpActivity.java)
 
 # eventbus  通信   事件总线  订阅发送
-## 常规通信方法
+## 1常规通信方法
 [EventSimpleActivity.java](app/src/main/java/com/example/administrator/myapplication/event/EventSimpleActivity.java)
-## evenbus 通信方法
+通过实现接口的方式实现对上层服务操作的监听
+缺点：耦合性比较强
+
+## 本地广播监听
+[EventLocalListenerActivity.java](app/src/main/java/com/example/administrator/myapplication/event/EventLocalListenerActivity.java)
+通过注册本地广播进行监听组建的变化
+
+## 使用组件监听evenbus 通信方法
 
 

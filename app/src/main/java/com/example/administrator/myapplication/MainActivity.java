@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.administrator.myapplication.event.EventLocalListenerActivity;
 import com.example.administrator.myapplication.event.EventSimpleActivity;
 import com.example.administrator.myapplication.handler.HanderOneActivity;
 import com.example.administrator.myapplication.handler.HanderTwoActivity;
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //定义xml属性
     //activityHandlerOne(handler的基本处理)
     private Button activityHandlerOne,activityHandlerTwo,activityListView,activityOkhttp
-    ,activityEventSimple;
+    ,activityEventSimple,btnLocalListener;
 
 
 
@@ -54,6 +55,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         activityEventSimple = (Button) findViewById(R.id.btn_event_simple);
         //这里必须添加应用事件
         activityEventSimple.setOnClickListener(this);
+
+        //广播事件监听
+        btnLocalListener = (Button) findViewById(R.id.btn_local_listener);
+        //这里必须添加应用事件
+        btnLocalListener.setOnClickListener(this);
     }
     @Override
     public void onClick(View v) {
@@ -78,6 +84,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_event_simple:
             System.out.println("btn_event_simple");
             startActivity(new Intent(this, EventSimpleActivity.class));
+            break;
+
+            case R.id.btn_local_listener:
+            System.out.println("btn_local_listener");
+            startActivity(new Intent(this, EventLocalListenerActivity.class));
             break;
 
         }
