@@ -28,5 +28,6 @@
     <string name="event_simple">简单事件监听</string>
     <string name="event_bus">eventbus事件总线</string>
     <string name="local_listener">广播事件监听</string>
+    <string name="eventBuus_simpler">eventBuus简单</string>
 
 </resources>

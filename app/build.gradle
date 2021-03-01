@@ -40,5 +40,6 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:3.7.0'
     //Picasso
     implementation 'com.squareup.picasso:picasso:2.5.2'
-
+    //事件监听
+    implementation 'org.greenrobot:eventbus:3.1.1'
 }

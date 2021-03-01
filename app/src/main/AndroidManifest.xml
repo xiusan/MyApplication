@@ -80,6 +80,11 @@
         <activity
             android:name=".event.EventLocalListenerActivity"
             android:label="@string/local_listener" />
+
+        <!-- eventBuus简单事件监听  -->
+        <activity
+            android:name=".event.EventBusSimpleActivity"
+            android:label="@string/eventBuus_simpler" />
     </application>
 
 </manifest>

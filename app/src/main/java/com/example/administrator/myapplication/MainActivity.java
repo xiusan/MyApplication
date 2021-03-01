@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.administrator.myapplication.event.EventBusSimpleActivity;
 import com.example.administrator.myapplication.event.EventLocalListenerActivity;
 import com.example.administrator.myapplication.event.EventSimpleActivity;
 import com.example.administrator.myapplication.handler.HanderOneActivity;
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //定义xml属性
     //activityHandlerOne(handler的基本处理)
     private Button activityHandlerOne,activityHandlerTwo,activityListView,activityOkhttp
-    ,activityEventSimple,btnLocalListener;
+    ,activityEventSimple,btnLocalListener,btnEventbusSimple;
 
 
 
@@ -60,6 +61,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnLocalListener = (Button) findViewById(R.id.btn_local_listener);
         //这里必须添加应用事件
         btnLocalListener.setOnClickListener(this);
+
+        //eventBuus简单事件监听
+        btnEventbusSimple = (Button) findViewById(R.id.btn_event_bus_simple);
+        //这里必须添加应用事件
+        btnEventbusSimple.setOnClickListener(this);
     }
     @Override
     public void onClick(View v) {
@@ -88,7 +94,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.btn_local_listener:
             System.out.println("btn_local_listener");
-            startActivity(new Intent(this, EventLocalListenerActivity.class));
+
+            case R.id.btn_event_bus_simple:
+            System.out.println("btn_event_bus_simple");
+            startActivity(new Intent(this, EventBusSimpleActivity.class));
             break;
 
         }
