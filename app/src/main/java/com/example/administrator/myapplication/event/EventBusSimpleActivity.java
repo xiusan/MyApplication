@@ -66,7 +66,7 @@ public class EventBusSimpleActivity extends AppCompatActivity {
             public void onClick(View view) {
                 // 发布方 Display dialog fragment (publisher)
                 L.i("demo");
-                PublisherLocalListenerDialogFragment fragment = new  PublisherLocalListenerDialogFragment();
+                PublisherEventBusSimpleDialogFragment fragment = new  PublisherEventBusSimpleDialogFragment();
 
                 fragment.show(getSupportFragmentManager(),"SubscriberSimple");
             }

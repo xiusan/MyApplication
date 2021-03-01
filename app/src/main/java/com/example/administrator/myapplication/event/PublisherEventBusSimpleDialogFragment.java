@@ -10,8 +10,10 @@ import android.support.v4.app.DialogFragment;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AlertDialog;
 
+import org.greenrobot.eventbus.EventBus;
+
 public class PublisherEventBusSimpleDialogFragment extends DialogFragment {
-    private static final String TAG = "PublisherDialogFragment";
+    private static final String TAG = "PublisherEventBusSimpleDialogFragment";
 
     @NonNull
     @Override
@@ -26,23 +28,11 @@ public class PublisherEventBusSimpleDialogFragment extends DialogFragment {
                 switch (which) {
                     case 0:
                         // success
-                        {
-                            final Intent intent = new Intent();
-                            intent.setAction(EventLocalListenerActivity.HANDLE_EVENT_ACTION);
-                            intent.putExtra(EventLocalListenerActivity.STATUS_KEY,true);
-                            LocalBroadcastManager.getInstance(getActivity())
-                                    .sendBroadcast(intent);
-                        }
+                        postSuccessEvent();
                         break;
                     case 1:
                         // failure
-                    {
-                        final Intent intent = new Intent();
-                        intent.setAction(EventLocalListenerActivity.HANDLE_EVENT_ACTION);
-                        intent.putExtra(EventLocalListenerActivity.STATUS_KEY,false);
-                        LocalBroadcastManager.getInstance(getActivity())
-                                .sendBroadcast(intent);
-                    }
+                        postFailureEvent();
                         break;
                 }
             }
@@ -50,14 +40,12 @@ public class PublisherEventBusSimpleDialogFragment extends DialogFragment {
         return builder.create();
     }
 
-    private void postAsyncEvent() {
+    private void postFailureEvent() {
+        EventBus.getDefault().post(new FailureEvent());
     }
 
-    private void postBackgroundEvent() {
-    }
-
-    private void postMainOrderedEvent() {
-
+    private void postSuccessEvent() {
+        EventBus.getDefault().post(new SuccessEvent());
     }
 
 }
