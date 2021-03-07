@@ -9,19 +9,22 @@ package com.example.administrator.myapplication.fragment;
  *  描述：    管家服务
  */
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.example.administrator.myapplication.R;
+import com.example.administrator.myapplication.recycler.RecyclerActivity;
 
-
-public class ButlerFragment extends Fragment{
+public class ButlerFragment extends Fragment  {
 
     private ListView mChatListView;
+    private Button butLinelist;
 
 
 
@@ -35,9 +38,25 @@ public class ButlerFragment extends Fragment{
     //初始化View
     private void findView(View view) {
 
+    }
 
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+
+        // TODO Auto-generated method stub
+        super.onActivityCreated(savedInstanceState);
+        butLinelist = (Button)getActivity().findViewById(R.id.but_line_list);
+        butLinelist.setOnClickListener(new View.OnClickListener() {
+        //跳转到RecyclerView
+            @Override
+            public void onClick(View arg0) {
+                // TODO Auto-generated method stub
+                startActivity(new Intent(getContext(), RecyclerActivity.class));
+            }
+        });
     }
 
 
 }
+
 
